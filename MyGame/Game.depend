@@ -1,0 +1,88 @@
+# depslib dependency file v1.0
+1556693830 source:e:\mygame\basicfunction.cpp
+	"BasicFunction.h"
+	"BasicObject.h"
+	"TextOb.h"
+
+1556693435 e:\mygame\basicfunction.h
+	<windows.h>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	<vector>
+	<iostream>
+	<chrono>
+	<thread>
+
+1556693830 source:e:\mygame\basicobject.cpp
+	"BasicObject.h"
+
+1556724830 e:\mygame\basicobject.h
+	"BasicFunction.h"
+	<iostream>
+
+1556724612 source:e:\mygame\main.cpp
+	"BasicFunction.h"
+	"BasicObject.h"
+	"MainPlayer.h"
+	"Dragon.h"
+	"Timer.h"
+	"TextOb.h"
+	"Health.h"
+	"Explosion.h"
+
+1555557272 e:\mygame\mapgame.h
+	"BasicFunction.h"
+	"BasicObject.h"
+
+1555557285 source:e:\mygame\mapgame.cpp
+	"MapGame.h"
+	<iostream>
+	<stdio.h>
+
+1556693830 source:e:\mygame\mainplayer.cpp
+	"MainPlayer.h"
+	"BasicFunction.h"
+	"BasicObject.h"
+
+1556451870 e:\mygame\mainplayer.h
+	"BasicFunction.h"
+	"BasicObject.h"
+
+1556694474 source:e:\mygame\dragon.cpp
+	"Dragon.h"
+	"MainPlayer.h"
+	"BasicFunction.h"
+	"BasicObject.h"
+
+1556693829 e:\mygame\dragon.h
+	"BasicFunction.h"
+	"BasicObject.h"
+	"MainPlayer.h"
+
+1556693857 e:\mygame\timer.h
+
+1556693879 source:e:\mygame\timer.cpp
+	"Timer.h"
+	"BasicFunction.h"
+
+1556556991 source:e:\mygame\textob.cpp
+	"TextOb.h"
+
+1556379256 e:\mygame\textob.h
+	"BasicFunction.h"
+
+1556522973 e:\mygame\health.h
+	"BasicFunction.h"
+
+1556523637 source:e:\mygame\health.cpp
+	"Health.h"
+
+1556693435 source:e:\mygame\explosion.cpp
+	"Explosion.h"
+
+1556693830 e:\mygame\explosion.h
+	"BasicFunction.h"
+	"BasicObject.h"
+

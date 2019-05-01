@@ -1,0 +1,10 @@
+Menu_sound: https://downloads.khinsider.com/game-soundtracks/album/bloodborne-original-soundtrack-2015/211%2520Moon%2520Presence.mp3
+game low:https://www.audioblocks.com/stock-audio/house-synth-36-110-bpm-146781.html
+game fast:https://www.audioblocks.com/stock-audio/house-synth-36-130-bpm-146782.html
+
+skill: https://www.youtube.com/watch?v=0xZ0RmEsvlk&t=22s
+Explosion: https://www.youtube.com/watch?v=aZZmZqaCwSI
+
+collision: https://www.youtube.com/watch?v=ZtKOvkj_i4E
+
+game_over: https://www.audioblocks.com/stock-audio/deep-voice-game-over.html;
