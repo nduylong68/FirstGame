@@ -46,6 +46,9 @@ struct Input // cau truc danh cho viec di chuyen
 {
     int left;
     int right;
+    int up;
+    int down;
+
 };
 
 

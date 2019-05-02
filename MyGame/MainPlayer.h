@@ -52,6 +52,7 @@ private:
     int frame; // bien luu chi so o frame xemd ang o frame nao;
     int status; // bien luu trang thai di chuyen;
     int Player_Speed;
+    bool just_start;
 
 
 } ;

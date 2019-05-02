@@ -259,7 +259,7 @@ int main(int argc, char* argv[] ) {
             {
                 switch(g_event.key.keysym.sym)
                 {
-                case SDLK_UP:
+                case SDLK_s:
                     {
                         if( HealingNum > 0 && Life < 1000)
                         {
@@ -274,7 +274,7 @@ int main(int argc, char* argv[] ) {
                         }
                         break;
                     }
-                case SDLK_DOWN:
+                case SDLK_d:
                     {
                         if (SkillNum >0)
                         {
@@ -344,7 +344,7 @@ int main(int argc, char* argv[] ) {
         if (SpeedUp == true &&Dragon_Speed <= 50)
         {
             Dragon_Speed += 2 ;
-            New_Speed += 3;
+            New_Speed += 2;
             p_player.SetPlayerSpeed(New_Speed);
         }
 
@@ -400,6 +400,8 @@ int main(int argc, char* argv[] ) {
 
         if (Life <= 0)
                     {
+                        Dragon_Speed = 8;
+                        New_Speed = 8;
                         Mix_HaltMusic();
                         cout << Mix_PlayingMusic() << endl;
                         cout << "Die" << endl;
@@ -441,7 +443,7 @@ int main(int argc, char* argv[] ) {
             int delay_time = time_a_frame - real_time;
             if (delay_time > 0)
             {
-            //SDL_Delay(delay_time);
+            SDL_Delay(delay_time);
             }
         }
     }

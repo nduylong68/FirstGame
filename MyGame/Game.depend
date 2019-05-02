@@ -86,3 +86,81 @@
 	"BasicFunction.h"
 	"BasicObject.h"
 
+1556791761 source:e:\github\firstgame\mygame\basicfunction.cpp
+	"BasicFunction.h"
+	"BasicObject.h"
+	"TextOb.h"
+
+1556793019 e:\github\firstgame\mygame\basicfunction.h
+	<windows.h>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	<vector>
+	<iostream>
+	<chrono>
+	<thread>
+
+1556791761 e:\github\firstgame\mygame\basicobject.h
+	"BasicFunction.h"
+	<iostream>
+
+1556791762 e:\github\firstgame\mygame\textob.h
+	"BasicFunction.h"
+
+1556791761 source:e:\github\firstgame\mygame\basicobject.cpp
+	"BasicObject.h"
+
+1556791761 source:e:\github\firstgame\mygame\dragon.cpp
+	"Dragon.h"
+	"MainPlayer.h"
+	"BasicFunction.h"
+	"BasicObject.h"
+
+1556791761 e:\github\firstgame\mygame\dragon.h
+	"BasicFunction.h"
+	"BasicObject.h"
+	"MainPlayer.h"
+
+1556793019 e:\github\firstgame\mygame\mainplayer.h
+	"BasicFunction.h"
+	"BasicObject.h"
+
+1556791761 source:e:\github\firstgame\mygame\explosion.cpp
+	"Explosion.h"
+
+1556791761 e:\github\firstgame\mygame\explosion.h
+	"BasicFunction.h"
+	"BasicObject.h"
+
+1556791761 source:e:\github\firstgame\mygame\health.cpp
+	"Health.h"
+
+1556791761 e:\github\firstgame\mygame\health.h
+	"BasicFunction.h"
+
+1556791762 source:e:\github\firstgame\mygame\textob.cpp
+	"TextOb.h"
+
+1556791762 source:e:\github\firstgame\mygame\timer.cpp
+	"Timer.h"
+	"BasicFunction.h"
+
+1556791762 e:\github\firstgame\mygame\timer.h
+
+1556793019 source:e:\github\firstgame\mygame\main.cpp
+	"BasicFunction.h"
+	"BasicObject.h"
+	"MainPlayer.h"
+	"Dragon.h"
+	"Timer.h"
+	"TextOb.h"
+	"Health.h"
+	"Explosion.h"
+
+1556793028 source:e:\github\firstgame\mygame\mainplayer.cpp
+	"MainPlayer.h"
+	"BasicFunction.h"
+	"BasicObject.h"
+

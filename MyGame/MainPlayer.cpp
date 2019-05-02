@@ -19,7 +19,10 @@ MainPlayer:: MainPlayer()
     status = -1;
     Input_type.left = 0;
     Input_type.right = 0;
+    Input_type.up = 0;
+    Input_type.down = 0;
     Player_Speed = 8;
+    just_start = true;
 }
 
 MainPlayer::~MainPlayer()
@@ -99,15 +102,29 @@ void MainPlayer::HandleInputAction(SDL_Event events, SDL_Renderer* screen)
                 status = walk_right;
                 Input_type.right = 1;
                 Input_type.left = 0;
+                break;
             }
-            break;
+
         case SDLK_LEFT:
             {
                 status = walk_left;
                 Input_type.left = 1;
                 Input_type.right = 0;
+                break;
             }
-            break;
+
+        case SDLK_UP:
+            {
+                Input_type.up = 1;
+                Input_type.down = 0;
+                break;
+            }
+        case SDLK_DOWN:
+            {
+                Input_type.up = 0;
+                Input_type.down = 1;
+                break;
+            }
         default:
             break;
         }
@@ -126,6 +143,16 @@ void MainPlayer::HandleInputAction(SDL_Event events, SDL_Renderer* screen)
                 Input_type.left = 0;
             }
             break;
+        case SDLK_UP:
+            {
+                Input_type.up = 0;
+            }
+            break;
+        case SDLK_DOWN:
+            {
+                Input_type.down = 0;
+            }
+            break;
         }
     }
     if (Input_type.left == 0 && Input_type.right == 0)
@@ -137,11 +164,18 @@ void MainPlayer::HandleInputAction(SDL_Event events, SDL_Renderer* screen)
 void MainPlayer::DoPlayer()
 {
     x_val = 0;
+    if (just_start == true)
+    {
     y_val += Gravity; // toc do roi cua nhan vat
-
-    if (y_val > Max_Fall_Speed) {
+        if (y_val > Max_Fall_Speed) {
         y_val = Max_Fall_Speed;
+        }
     }
+    if (just_start == false)
+    {
+        y_val = 0;
+    }
+
 
     if (Input_type.left == 1)
     {
@@ -152,6 +186,15 @@ void MainPlayer::DoPlayer()
         x_val += Player_Speed;
     }
 
+    if (Input_type.up == 1)
+    {
+        y_val -= Player_Speed;
+    }
+    else if (Input_type.down == 1)
+    {
+        y_val += Player_Speed;
+    }
+
     CheckToMap();
 }
 
@@ -160,7 +203,12 @@ void MainPlayer::CheckToMap()
     x_pos += x_val;
     y_pos += y_val;
 
-    if(y_pos >= 300){ y_pos = 300;}
+    if(y_pos >= 300 && just_start == true)
+        {
+            y_pos = 300;
+            just_start = false;
+        }
+
 
     if(x_pos < 0) {
         x_pos = 0;
@@ -168,6 +216,15 @@ void MainPlayer::CheckToMap()
     if ( x_pos > screen_width - 100)
     {
         x_pos = screen_width - 100;
+    }
+
+    if (y_pos < 63)
+    {
+        y_pos = 63;
+    }
+    if (y_pos > screen_height)
+    {
+        y_pos = screen_height;
     }
 
 }
