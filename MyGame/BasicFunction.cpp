@@ -145,6 +145,8 @@ void basicfunction::ShowMenu(SDL_Renderer* scr, bool& Menu, TTF_Font* font, bool
 
           else if (Menu_Choice.type == SDL_QUIT)
           {
+                        Mix_FreeMusic(menu_music);
+                        menu_music = NULL;
                         TextMenu[0].Free();
                         TextMenu[1].Free();
                         Img_Menu.Free();

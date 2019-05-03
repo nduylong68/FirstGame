@@ -21,7 +21,7 @@ public:
 
     void InitHealth(SDL_Renderer* screen);
 
-    void SetClip(int life);
+    void SetClip(int healthbar);
 
 
     void Render_Health( int life, SDL_Renderer* screen, SDL_Rect* clip );

@@ -26,8 +26,6 @@ public:
     void DoPlayer(); // ham de cong tru di luong cho nhan van di chuyen, can truyen vao ban do de check;
     void CheckToMap();
 
-    bool on_ground;
-
     float getAngxPos() const {return x_pos;};
     float getAngyPos() const {return y_pos;};
     int getAngWidthFrame() const {return width_frame;};

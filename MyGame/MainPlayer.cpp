@@ -218,13 +218,13 @@ void MainPlayer::CheckToMap()
         x_pos = screen_width - 100;
     }
 
-    if (y_pos < 63)
+    if (y_pos < 0)
     {
-        y_pos = 63;
+        y_pos = 0;
     }
-    if (y_pos > screen_height)
+    if (y_pos > screen_height - 63)
     {
-        y_pos = screen_height;
+        y_pos = screen_height - 63;
     }
 
 }

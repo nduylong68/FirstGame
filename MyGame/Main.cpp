@@ -103,16 +103,6 @@ bool Load_Background()
 
 }
 
-/*bool Load_Menu()
-{
-    bool Menuload = Menu_pic.LoadImg("Pic/Menu.png",g_screen);
-
-    return Menuload;
-
-} */
-
-
-
 
 void Close()  // ham tat tat ca cac chuong trinh di.
 {
@@ -147,6 +137,10 @@ void Close()  // ham tat tat ca cac chuong trinh di.
     SDL_Quit();
     TTF_Quit();
     Mix_Quit();
+    SDL_DestroyRenderer(g_screen);
+    SDL_DestroyWindow(g_window);
+
+
 
 }
 
@@ -167,14 +161,8 @@ int main(int argc, char* argv[] ) {
 
     if (Load_Background() == false ) return -1;
 
-
-    //GameMap game_map;
-    //game_map.LoadMap("map/map.dat");
-    //game_map.LoadTiles(g_screen);
-
   while (is_quit == false)
   {
-
 
     MainPlayer p_player;
     p_player.LoadImg("Pic/player_stand.png", g_screen);
@@ -216,7 +204,7 @@ int main(int argc, char* argv[] ) {
     TextObject SkillText;
     SkillText.SetColor(TextObject::WHITEText);
 
-    fps_timer.start();
+
 
     int Life = 1000;
 
@@ -236,6 +224,7 @@ int main(int argc, char* argv[] ) {
 
     while( MenuOff == true && is_quit != true && is_playing == true)
     {
+        fps_timer.start();
         bool Skilling = false;
         if (Mix_PlayingMusic() == 0)
         {
@@ -403,7 +392,6 @@ int main(int argc, char* argv[] ) {
                         Dragon_Speed = 8;
                         New_Speed = 8;
                         Mix_HaltMusic();
-                        cout << Mix_PlayingMusic() << endl;
                         cout << "Die" << endl;
                         is_playing = false;
                         Mix_PlayChannel(-1,GameOver_sound, 0);
@@ -411,7 +399,7 @@ int main(int argc, char* argv[] ) {
 
         //Show Score
         string str_score = "Score: ";
-        score_val +=  1; //SDL_GetTicks() / 100 - time_start/100;
+        score_val +=  1;
         string str_val = to_string(score_val);
         str_score += str_val;
 
@@ -454,6 +442,9 @@ int main(int argc, char* argv[] ) {
     Skill.Free();
     score_game.Free();
 
+    HealingText.Free();
+    SkillText.Free();
+
 
     p_player.Free();
     for (int k = 0; k< number_of_dragon; k++)
@@ -470,12 +461,7 @@ int main(int argc, char* argv[] ) {
         {
             basicfunction::ShowGameOver(g_screen, MenuOff, font_menu, is_playing);
         }
-    HealingText.Free();
-    SkillText.Free();
-
   }
-
-
 
     Close();
     return 0;

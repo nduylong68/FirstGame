@@ -86,12 +86,12 @@
 	"BasicFunction.h"
 	"BasicObject.h"
 
-1556791761 source:e:\github\firstgame\mygame\basicfunction.cpp
+1556863744 source:e:\github\firstgame\mygame\basicfunction.cpp
 	"BasicFunction.h"
 	"BasicObject.h"
 	"TextOb.h"
 
-1556793019 e:\github\firstgame\mygame\basicfunction.h
+1556863744 e:\github\firstgame\mygame\basicfunction.h
 	<windows.h>
 	<SDL.h>
 	<SDL_image.h>
@@ -123,7 +123,7 @@
 	"BasicObject.h"
 	"MainPlayer.h"
 
-1556793019 e:\github\firstgame\mygame\mainplayer.h
+1556863930 e:\github\firstgame\mygame\mainplayer.h
 	"BasicFunction.h"
 	"BasicObject.h"
 
@@ -137,7 +137,7 @@
 1556791761 source:e:\github\firstgame\mygame\health.cpp
 	"Health.h"
 
-1556791761 e:\github\firstgame\mygame\health.h
+1556863930 e:\github\firstgame\mygame\health.h
 	"BasicFunction.h"
 
 1556791762 source:e:\github\firstgame\mygame\textob.cpp
@@ -149,7 +149,7 @@
 
 1556791762 e:\github\firstgame\mygame\timer.h
 
-1556793019 source:e:\github\firstgame\mygame\main.cpp
+1556858224 source:e:\github\firstgame\mygame\main.cpp
 	"BasicFunction.h"
 	"BasicObject.h"
 	"MainPlayer.h"
@@ -159,7 +159,7 @@
 	"Health.h"
 	"Explosion.h"
 
-1556793028 source:e:\github\firstgame\mygame\mainplayer.cpp
+1556856056 source:e:\github\firstgame\mygame\mainplayer.cpp
 	"MainPlayer.h"
 	"BasicFunction.h"
 	"BasicObject.h"
